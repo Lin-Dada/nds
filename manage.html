@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>云平台安全防护系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">-->
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<style>
+    .table > tbody > tr > td
+	{
+		border: 0px solid transparent !important;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					云平台安全防护系统
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/manager.jpg" alt="user-img" width="36" class="img-circle"><span >Lindada</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="assets/img/manager.jpg" alt="user"></div>
+										<div class="u-text">
+											<h4>Lindada</h4>
+											<p class="text-muted">173213354@qq.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">My profile</a></div>
+										</div>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="editprofile.html"><i class="ti-settings"></i> Edit Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#outlogin"><i class="fa fa-power-off"></i> Logout</a>
+							</ul>
+							<!-- /.dropdown-user -->
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar">
+			<div class="scrollbar-inner sidebar-wrapper">
+				<div class="user">
+					<div class="photo">
+						<img src="assets/img/manager.jpg">
+					</div>
+					<div class="info">
+						<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<span>
+								Lindada
+								<span class="user-level">Administrator</span>
+								<span class="caret"></span>
+							</span>
+						</a>
+						<div class="clearfix"></div>
+						<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+							<ul class="nav">
+								<li>
+									<a href="profile.html">
+										<span class="link-collapse">My profile</span>
+									</a>
+								</li>
+								<li>
+									<a href="editprofile.html">
+										<span class="link-collapse">Edit Profile</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="index.html">
+							<i class="la la-dashboard"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="nav-item ">
+						<a href="history1h.html">
+							<i class="la la-history"></i>
+							<p>History</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="abnormal.html">
+							<i class="la la-book"></i>
+							<p>Anomaly logs</p>
+							<span class="badge badge-danger">50</span>
+						</a>
+					</li>
+					<li class="nav-item active" >
+						<a href="manage.html">
+							<i class="la la-cog"></i>
+							<p>Setting</p>
+						</a>
+					</li>
+					<li class="nav-item" style="border-bottom: 1px solid #eee;">
+						<a href="train.html">
+							<i class="la la-cogs"></i>
+							<p>Train model</p>
+						</a>
+					</li>
+					<li class="nav-item update-pro">
+						<button  data-toggle="modal" data-target="#outlogin" class="btn btn-danger">
+							<i class="la la-sign-out"></i>
+							<p>Logout</p>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4  class="page-title">System Setting&nbsp;&nbsp;&nbsp;</h4>
+						<div class="row" >
+							<div class="col-md-6">
+								<div class="card">
+									 <div class="card-header">
+										<h4 class="card-title">My Account</h4>
+									</div>
+									<div class="card-body">	
+									 <table class="table" >
+											<tbody >
+												<tr>
+													<td><b>ID</b></td>
+													<td>Lindada</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td><b>Permission</b></td>
+													<td>Super Administrator</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td><b>Tel</b></td>
+													<td >13760148249</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td><b>Email</b></td>
+													<td >peng.lin@siat.ac.cn</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="pull-right">
+											<button class="btn btn-link" onclick="javascrtpt:window.location.href='editprofile.html'"><b>Go to Edit</b></button>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+										 <div class="card-header">
+											<h4 class="card-title">Invite New User</h4>
+										 </div>
+									<div class="card-body">	
+										<h5><b class="text-warning" id="code">My Invitation Code</b></h5>
+										<p class="text-primary" style="display:none;" id="tip">Send this code to your friend, and he can use it to create a new account.</p>
+										<p class="lead">The invitation code can only be used within an hour and only once.</p>
+										<button class="btn btn-primary btn-full text-left mt-3 mb-3" id="generate"><b>Click to Generate My Invitation Code</b></button>
+									</div>
+								</div>
+								<script type="text/javascript">
+								 $(function(){
+								   $("#generate").click(function(){
+										document.getElementById("tip").style.display = "block";
+										$("#code").text("xkfMGd56dTGdJc");
+								  });
+								 });
+								</script>
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">Users</h4>
+									</div>
+									<div class="card-body">
+										<table class="table table-hover">
+											<thead>
+												<tr>
+													<th scope="col">ID</th>
+													<th scope="col">Permission</th>
+													<th scope="col">Invited From</th>
+													<th scope="col">Registration Time</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="profile.html">Lindada</a></td>
+													<td>Administrator</td>
+													<td>*</td>
+													<td>2019-2-19 17:31:30</td>
+												</tr>
+												<tr>
+													<td><a href="profile.html">Kejiang Ye</a></td>
+													<td>User</td>
+													<td><a href="profile.html">Lindada</td>
+													<td>2019-2-19 17:31:30</td>
+												</tr>
+												<tr>
+													<td>&nbsp;&nbsp;&nbsp;<b>...</b></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="pull-right">
+											<button class="btn btn-link" onclick="javascrtpt:window.location.href='editusers.html'"><b>See More and Edit</b></button>
+										</div>
+									</div>
+								</div>								
+							</div>
+							<div class="col-md-6">
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">Operation Logs</h4>
+									</div>
+									<div class="card-body">
+										<table class="table table-head-bg-success">
+											<thead>
+												<tr>
+													<th scope="col">User</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><p>Lindada deleted the user <b>Huyishen</b> at 2018-12-14 14:56:40</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada edited the profile of <b>Huyishen</b> at 2018-12-14 14:55:10</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada changed the permission of KejiangYe from <b>Administrator</b> to <b>User</b> at 2018-12-14 14:51:18</p></td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="table table-head-bg-warning">
+											<thead>
+												<tr>
+													<th scope="col">Anomaly</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><p>Lindada read one page of Anomaly log at 2018-12-15 14:56:40</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada read all pages of Anomaly log at 2018-12-15 14:57:40</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada changed a <b>DDos</b> anomaly to <b>web attack</b> anomaly</b> at 2018-12-14 14:57:40</td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="table table-head-bg-default">
+											<thead>
+												<tr>
+													<th scope="col">Registration</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><p>Lindada invited <b>Zhangsan</b> to register a new account at 2018-12-14 14:56:40</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada invited <b>Lisi</b> to register a new account at 2018-12-14 14:56:40</p></td>
+												</tr>
+												<tr>
+												<td><p>Lindada invited <b>Huyishen</b> to register a new account at 2018-12-11 14:56:40</p></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="pull-right">
+											<button class="btn btn-link" onclick="javascrtpt:window.location.href='oplogsu.html'"><b>Go to See More</b></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<footer class="footer">
+					<div class="container-fluid">
+					</div>
+				</footer>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="outlogin" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger">
+					<h6 class="modal-title"><i class="la la-frown-o"></i> Logout</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>After logging out, the relevant cookie information will be cleared and you will need to log in again next time.</p>
+					<p>
+						<b>Are you sure to logout?</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" >Yes,I'm sure</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/js/ready.min.js"></script>
+</html>

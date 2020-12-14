@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>云平台安全防护系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">-->
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					云平台安全防护系统
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/manager.jpg" alt="user-img" width="36" class="img-circle"><span >Lindada</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="assets/img/manager.jpg" alt="user"></div>
+										<div class="u-text">
+											<h4>Lindada</h4>
+											<p class="text-muted">173213354@qq.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">My profile</a></div>
+										</div>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="editprofile.html"><i class="ti-settings"></i> Edit Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#outlogin"><i class="fa fa-power-off"></i> Logout</a>
+							</ul>
+							<!-- /.dropdown-user -->
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar">
+			<div class="scrollbar-inner sidebar-wrapper">
+				<div class="user">
+					<div class="photo">
+						<img src="assets/img/manager.jpg">
+					</div>
+					<div class="info">
+						<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<span>
+								Lindada
+								<span class="user-level">Administrator</span>
+								<span class="caret"></span>
+							</span>
+						</a>
+						<div class="clearfix"></div>
+						<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+							<ul class="nav">
+								<li>
+									<a href="profile.html">
+										<span class="link-collapse">My profile</span>
+									</a>
+								</li>
+								<li>
+									<a href="editprofile.html">
+										<span class="link-collapse">Edit Profile</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="index.html">
+							<i class="la la-dashboard"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="nav-item ">
+						<a href="history1h.html">
+							<i class="la la-history"></i>
+							<p>History</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="abnormal.html">
+							<i class="la la-book"></i>
+							<p>Anomaly logs</p>
+							<span class="badge badge-danger">50</span>
+						</a>
+					</li>
+					<li class="nav-item" >
+						<a href="manage.html">
+							<i class="la la-cog"></i>
+							<p>Setting</p>
+						</a>
+					</li>
+					<li class="nav-item active" style="border-bottom: 1px solid #eee;">
+						<a href="train.html">
+							<i class="la la-cogs"></i>
+							<p>Train model</p>
+						</a>
+					</li>
+					<li class="nav-item update-pro">
+						<button  data-toggle="modal" data-target="#outlogin" class="btn btn-danger">
+							<i class="la la-sign-out"></i>
+							<p>Logout</p>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">Training&nbsp;&nbsp;&nbsp;</h4>
+						<div class="row" >
+							<div class="col-md-4">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">Task</h4>
+									</div>
+									<div class="card-body">
+										<div id="task-complete" class="chart-circle mt-4 mb-3" ><div class="circles-wrp" style="position: relative; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><path fill="transparent" stroke="#eee" stroke-width="8" d="M 74.98553920253764 4.000001472638488 A 71 71 0 1 1 74.90138242439691 4.000068488950063 Z" class="circles-maxValueStroke"></path><path fill="transparent" stroke="#1D62F0" stroke-width="8" d="M 74.98553920253764 4.000001472638488 A 71 71 0 1 1 7.458509176231658 53.11057293342702 " class="circles-valueStroke"></path></svg><div class="circles-text"  style="position: absolute; top: 0px; left: 0px; text-align: center; width: 100%; font-size: 52.5px; height: 150px; line-height: 150px;">80%</div></div></div>
+									</div>
+									<div class="card-footer">
+										<a href="traininf.html"><b>Get More Information >></b></a>
+									</div>
+								</div>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">Switch Detection Kernel</h4><p class="card-category">You can save up to five models.</p>
+									</div>
+									<div class="card-body">
+										<div class="form-check" id="radio">
+											<label class="form-radio-label">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="1" checked="">
+												<span class="form-radio-sign">Model_201812011121</span>&nbsp;&nbsp;&nbsp;&nbsp;<b class="text-success">The kernel using now</b>
+											</label>
+											<br><label class="form-radio-label">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="2">
+												<span class="form-radio-sign">Model_201811151423</span>
+											</label>
+											<br><label class="form-radio-label">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="3" >
+												<span class="form-radio-sign">Model_201811121233</span>
+											</label>
+											<br><label class="form-radio-label">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="4">
+												<span class="form-radio-sign">test</span>
+											</label>
+										</div>
+										<script type="text/javascript">
+										 $(function(){
+										   $(":radio").click(function(){
+										   if($(this).val()=="1")$("#model_inf").html("Accuracy: 91.8%&nbsp;&nbsp;Recall: 95.0%&nbsp;&nbsp;Precision: 92.0%&nbsp;&nbsp;Samples: 2706005");
+										   else if($(this).val()=="2")$("#model_inf").html("Accuracy: 90.8%&nbsp;&nbsp;Recall: 94.2%&nbsp;&nbsp;Precision: 91.8%&nbsp;&nbsp;Samples: 2706005");
+										   else if($(this).val()=="3")$("#model_inf").html("Accuracy: 86.8%&nbsp;&nbsp;Recall: 92.0%&nbsp;&nbsp;Precision: 87.0%&nbsp;&nbsp;Samples: 5705005");
+										   else if($(this).val()=="4")$("#model_inf").html("Accuracy: 92.8%&nbsp;&nbsp;Recall: 90.0%&nbsp;&nbsp;Precision: 91.0%&nbsp;&nbsp;Samples: 2706005");
+										  });
+										 });
+										</script>
+										<div class="card-footer">
+											<b><p class="text-danger" id="model_inf">Accuracy: 91.8%&nbsp;&nbsp;Recall: 95.0%&nbsp;&nbsp;Precision: 92.0%&nbsp;&nbsp;Samples: 2706005</p></b>
+											<button class="btn btn-success"><b>&nbsp;&nbsp;&nbsp;Select&nbsp;&nbsp;&nbsp;</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<button class="btn btn-danger"><b>&nbsp;&nbsp;&nbsp;Delete&nbsp;&nbsp;&nbsp;</b></button>
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+						<div class="row" >
+						<div class="col-md-11">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">New Train</h4>
+									</div>
+									<div class="">
+										<div class="row row-card-no-pd">
+											<div class="col-md-4">
+												<div class="card">
+													<div class="card-body">
+														<div class="form-group">
+																<label for="pillInput">Model Name</label>
+																<input type="text" class="form-control input-pill" id="pillInput" placeholder="">
+														</div>
+														<div class="form-group">
+																<label for="pillSelect">Train dataset</label>
+																<select class="form-control input-pill" id="pillSelect">
+																	<option>train1.csv / 6.13G</option>
+																	<option>train2.csv / 4.36G</option>
+																	<option>train3.csv / 2.53G</option>
+																</select>
+														</div>
+														<div class="form-group">
+																<label for="pillSelect">Test dataset</label>
+																<select class="form-control input-pill" id="pillSelect">
+																	<option>test1.csv / 456M</option>
+																	<option>test2.csv / 526M</option>
+																	<option>test3.csv / 216M</option>
+																</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-5">
+												<div class="card">
+													<div class="card-body">
+														<div class="form-group">
+																<label for="pillInput">LSTM Hidden Node</label>
+																<input type="text" class="form-control input-pill" id="pillInput" placeholder="(default: 256)">
+														</div>
+														<div class="form-group">
+																<label for="pillInput">Training Epochs</label>
+																<input type="text" class="form-control input-pill" id="pillInput" placeholder="(default: 100)">
+														</div>
+														<div class="form-group">
+																<label for="pillInput">Evaluate Steps</label>
+																<input type="text" class="form-control input-pill" id="pillInput" placeholder="(default: 2000)">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="card card-stats" >
+													<div class="card-body" >
+														<p class="fw-bold mt-1">&nbsp;</p><br>
+														<div class="card card-stats card-danger" style="cursor: pointer;">
+															<div class="card-body " onclick="alert('Reset')">
+																<div class="row">
+																		<div class="numbers" style="margin:0 auto">
+																			<h4 class="card-title">Reset</h4>
+																		</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="card card-stats card-success" style="cursor: pointer;">
+															<div class="card-body " onclick="alert('Submit')">
+																<div class="row">
+																		<div class="numbers" style="margin:0 auto">
+																			<h4 class="card-title">Submit</h4>
+																		</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>	
+				</div>
+			</div>
+				<footer class="footer">
+					<div class="container-fluid">
+					</div>
+				</footer>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="outlogin" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger">
+					<h6 class="modal-title"><i class="la la-frown-o"></i> Logout</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>After logging out, the relevant cookie information will be cleared and you will need to log in again next time.</p>
+					<p>
+						<b>Are you sure to logout?</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" >Yes,I'm sure</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/js/ready.min.js"></script>
+</html>

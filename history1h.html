@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>云平台安全防护系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">-->
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<script src="assets/js/echarts.min.js"></script>
+	<script src="assets/js/roma.js"></script>
+	<script src="assets/js/macarons.js"></script>
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					云平台安全防护系统
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/manager.jpg" alt="user-img" width="36" class="img-circle"><span >Lindada</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="assets/img/manager.jpg" alt="user"></div>
+										<div class="u-text">
+											<h4>Lindada</h4>
+											<p class="text-muted">173213354@qq.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">My profile</a></div>
+										</div>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="editprofile.html"><i class="ti-settings"></i> Edit Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#outlogin"><i class="fa fa-power-off"></i> Logout</a>
+							</ul>
+							<!-- /.dropdown-user -->
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar">
+			<div class="scrollbar-inner sidebar-wrapper">
+				<div class="user">
+					<div class="photo">
+						<img src="assets/img/manager.jpg">
+					</div>
+					<div class="info">
+						<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<span>
+								Lindada
+								<span class="user-level">Administrator</span>
+								<span class="caret"></span>
+							</span>
+						</a>
+						<div class="clearfix"></div>
+						<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+							<ul class="nav">
+								<li>
+									<a href="profile.html">
+										<span class="link-collapse">My profile</span>
+									</a>
+								</li>
+								<li>
+									<a href="editprofile.html">
+										<span class="link-collapse">Edit Profile</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="index.html">
+							<i class="la la-dashboard"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a href="history1h.html">
+							<i class="la la-history"></i>
+							<p>History</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="abnormal.html">
+							<i class="la la-book"></i>
+							<p>Anomaly logs</p>
+							<span class="badge badge-danger">50</span>
+						</a>
+					</li>
+					<li class="nav-item" >
+						<a href="manage.html">
+							<i class="la la-cog"></i>
+							<p>Setting</p>
+						</a>
+					</li>
+					<li class="nav-item" style="border-bottom: 1px solid #eee;">
+						<a href="train.html">
+							<i class="la la-cogs"></i>
+							<p>Train model</p>
+						</a>
+					</li>
+					<li class="nav-item update-pro">
+						<button  data-toggle="modal" data-target="#outlogin" class="btn btn-danger">
+							<i class="la la-sign-out"></i>
+							<p>Logout</p>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4  style="float:left" class="page-title">History&nbsp;&nbsp;&nbsp;</h4>
+						<div>
+							<ul class="nav nav-pills nav-primary">
+								<li class="nav-item ">
+									<a class="nav-link active" href="history1h.html">Nearly 1 Hour</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="history24h.html">Nearly 24 Hours&nbsp;</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="history7d.html">Nearly 7 day</a>
+								</li>
+							</ul>
+						</div>
+						<br>
+						<div class="row" >
+							<div class="col-md-6" id="card_type">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">Proportion of Each Attack Type</h4>
+										<p class="card-category">Only count the data of the last 1 hour</p>
+									</div>
+									<div class="card-body">	
+									 <div id="type" style="width:100%;height:310px;"></div>
+									</div>
+								</div>	 
+							</div>
+							<div class="col-md-6" id="card_from">
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">High-risk Attack Area</h4>
+										<p class="card-category">
+										Only show the top 5 areas with the most attacks</p>
+									</div>
+									<div class="card-body">
+										<div id="chart_from" style="width:100%;height:310px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-md-12" id="card_score">
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">Safety Factor</h4>
+										<p class="card-category">
+										Time scale is 1 minute</p>
+									</div>
+									<div class="card-body">
+										<div id="chart_score" style="width:100%;height:310px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-md-12" id="card_score">
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">Network Traffic(flows per minute)</h4>
+										<p class="card-category">
+										Time scale is 1 minute</p>
+									</div>
+									<div class="card-body">
+										<div id="dataflow" style="width:100%;height:310px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-md-12" id="card_score">
+								<div class="card" >
+									<div class="card-header">
+										<h4 class="card-title">Attack Statistics</h4>
+										<p class="card-category">
+										Time scale is 6 minutes</p>
+									</div>
+									<div class="card-body">
+										<div id="chart_hack" style="width:100%;height:310px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<footer class="footer">
+					<div class="container-fluid">
+					</div>
+				</footer>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="outlogin" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger">
+					<h6 class="modal-title"><i class="la la-frown-o"></i> Logout</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>After logging out, the relevant cookie information will be cleared and you will need to log in again next time.</p>
+					<p>
+						<b>Are you sure to logout?</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" >Yes,I'm sure</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/js/ready.min.js"></script>
+<script src="assets/js/history1h.js"></script>
+<script src="assets/js/china.js"></script>
+</html>

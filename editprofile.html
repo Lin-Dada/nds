@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>云平台安全防护系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">-->
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+
+
+		
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					云平台安全防护系统
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+					
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/manager.jpg" alt="user-img" width="36" class="img-circle"><span >Lindada</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="assets/img/manager.jpg" alt="user"></div>
+										<div class="u-text">
+											<h4>Lindada</h4>
+											<p class="text-muted">173213354@qq.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">My profile</a></div>
+										</div>
+								</li>
+								<div class="dropdown-divider"></div>
+								
+								<a class="dropdown-item" href="editprofile.html"><i class="ti-settings"></i> Edit Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#outlogin"><i class="fa fa-power-off"></i> Logout</a>
+							</ul>
+							<!-- /.dropdown-user -->
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="sidebar">
+			<div class="scrollbar-inner sidebar-wrapper">
+				<div class="user">
+					<div class="photo">
+						<img src="assets/img/manager.jpg">
+					</div>
+					<div class="info">
+						<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<span>
+								Lindada
+								<span class="user-level">Administrator</span>
+								<span class="caret"></span>
+							</span>
+						</a>
+						<div class="clearfix"></div>
+
+						<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+							<ul class="nav">
+								<li>
+									<a href="profile.html">
+										<span class="link-collapse">My profile</span>
+									</a>
+								</li>
+								
+								<li>
+									<a href="editprofile.html">
+										<span class="link-collapse">Edit Profile</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="index.html">
+							<i class="la la-dashboard"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="history1h.html">
+							<i class="la la-history"></i>
+							<p>History</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="abnormal.html">
+							<i class="la la-book"></i>
+							<p>Anomaly logs</p>
+							<span class="badge badge-danger">50</span>
+						</a>
+					</li>
+					<li class="nav-item active" >
+						<a href="manage.html">
+							<i class="la la-cog"></i>
+							<p>Setting</p>
+						</a>
+					</li>
+					<li class="nav-item" style="border-bottom: 1px solid #eee;">
+						<a href="train.html">
+							<i class="la la-cogs"></i>
+							<p>Train model</p>
+						</a>
+					</li>
+					
+					<li class="nav-item update-pro">
+						<button  data-toggle="modal" data-target="#outlogin" class="btn btn-danger">
+							<i class="la la-sign-out"></i>
+							<p>Logout</p>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">Edit Profile</h4>
+						
+						<div class="row" >
+							
+							
+							<div class="col-md-12" id="card_score">
+								<div class="col-md-12">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Fill in the Information</div>
+									</div>
+									<div class="card-body">
+										<div class="form-group">
+											<label for="disableinput">ID</label>
+											<input type="text" class="form-control" id="disableinput" placeholder="Lindada" disabled="">
+											<small id="nameHelp" class="form-text text-muted">ID can not be changed.</small>
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" id="email" placeholder="17321334@qq.com">
+										</div>
+										<div class="form-group">
+											<label for="inlineinput">Tel</label>
+											<input type="text" class="form-control" id="phonenum" placeholder="13760148249">
+										</div>
+										<div class="form-group">
+												<label for="comment">Signature</label>
+												<textarea class="form-control" id="signature" rows="5" >Life Is A Struggle.</textarea>
+											</div>
+										<div class="form-check" id="radio">
+											<label>If Change the Password</label><br>
+											<label class="form-radio-label">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="no" checked="">
+												<span class="form-radio-sign">No</span>
+											</label>
+											<label class="form-radio-label ml-3">
+												<input class="form-radio-input" type="radio" name="optionsRadios" value="yes">
+												<span class="form-radio-sign">Yes</span>
+											</label>
+										</div>
+										<script type="text/javascript">
+										 $(function(){
+										   $(":radio").click(function(){
+										   if($(this).val()=="yes")
+										   {
+												document.getElementById("password1").style.display = "block";
+												document.getElementById("password2").style.display = "block";
+										   }
+										   else
+										   {
+												document.getElementById("password1").style.display = "none";
+												document.getElementById("password2").style.display = "none";
+										   }
+										  });
+										 });
+										 
+										 
+										</script>
+										<div class="form-group" id="password1" style="display:none;">
+											<label for="password">Input the New Password</label>
+											<input type="password" class="form-control" id="passwordinput1" placeholder="Password">
+										</div>
+										<div class="form-group" id="password2" style="display:none;">
+											<label for="password">Input the New Password again</label>
+											<input type="password" class="form-control" id="passwordinput2" placeholder="Password" oninput="OnInput(event)" onpropertychange="OnPropChanged(event)">
+											<small id="error" class="form-text text-muted" style="display:none;">The Passwords Entered Do Not Match.</small>
+											<small id="success" class="form-text text-muted" style="display:none;">OK.</small>
+										</div>
+										
+										 <script type="text/javascript">
+										// Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+											function OnInput(event) {
+												pass1 = document.getElementById("passwordinput1").value;
+												pass2 = event.target.value
+												if(pass2 == "")
+												{
+													document.getElementById('password2').className = 'form-group';
+													document.getElementById("error").style.display = "none";
+													document.getElementById("success").style.display = "none";
+												}
+												else if(pass1 != pass2)
+												{
+													document.getElementById('password2').className = 'form-group has-error has-feedback';
+													document.getElementById("error").style.display = "block";
+													document.getElementById("success").style.display = "none";
+												}
+												else 
+												{
+													document.getElementById('password2').className = 'form-group has-success';
+													document.getElementById("error").style.display = "none";
+													document.getElementById("success").style.display = "block";
+												}
+											}
+										// Internet Explorer
+											function OnPropChanged(event) {
+												if (event.propertyName.toLowerCase () == "value") {
+													alert ("The new content: " + event.srcElement.value);
+												}
+											}
+										</script>
+										<!-- <div class="form-group has-success">
+											<label for="successInput">Success Input</label>
+											<input type="password" id="successInput" value="Success" class="form-control">
+										</div>
+										<div class="form-group has-error has-feedback">
+											<label for="errorInput">Error Input</label>
+											<input type="text" id="errorInput" value="Error" class="form-control">
+											<small id="emailHelp" class="form-text text-muted">Please provide a valid informations.</small>
+										</div> -->
+
+									</div>
+									<div class="card-action">
+										<button class="btn btn-success">&nbsp;&nbsp;Submit&nbsp;&nbsp;</button>
+										<button class="btn btn-danger">&nbsp;&nbsp;Cancle&nbsp;&nbsp;</button>
+									</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						
+					</div>
+						
+						
+				</div>
+			</div>
+				<footer class="footer">
+					<div class="container-fluid">
+						
+					</div>
+				</footer>
+			
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="outlogin" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger">
+					<h6 class="modal-title"><i class="la la-frown-o"></i> Logout</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>After logging out, the relevant cookie information will be cleared and you will need to log in again next time.</p>
+					<p>
+						<b>Are you sure to logout?</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" >Yes,I'm sure</button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+
+<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/js/ready.min.js"></script>
+
+
+
+
+
+</html>
